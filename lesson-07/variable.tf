@@ -17,4 +17,7 @@ variable "machine_size" {
   default     = "t2.micro"
 }
 
+variable "PROFILE" {
+  type = string
 
+}
