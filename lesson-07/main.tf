@@ -10,13 +10,14 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-2"
+  region  = "us-east-2"
+  profile = "support"
 }
 
 resource "aws_instance" "lesson_07" {
-  ami           = "ami-0c7c4e3c6b4941f0f"
-  instance_type = "t2.micro"
+  ami           = var.ami
+  instance_type = var.machine_size
   tags = {
-    Name      = "Lesson-07-Variables!!!"
+    Name = var.instance_name
   }
 }
