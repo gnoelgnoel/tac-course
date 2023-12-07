@@ -10,15 +10,16 @@ terraform {
 }
 
 provider "aws" {
-  region = var.region
+  region  = var.region
+  profile = var.profile
 }
 
 resource "aws_instance" "opt_03" {
   ami           = var.ami
-  instance_type = "t2.micro"
+  instance_type = var.instance_type
 
   tags = {
-    Name = var.name
+    Name     = var.name
     Category = var.category
   }
 }
