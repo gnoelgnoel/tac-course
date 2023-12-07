@@ -1,9 +1,9 @@
-output "public_dns" {
+output "bb_dns" {
   description = "DNS name of the EC2 instance"
-  value       = aws_instance.lesson_06.public_dns
+  value       = aws_instance.bipolarbitsapplication.public_dns
 }
 
-output "public_ip" {
+output "bb_ip" {
   description = "Public IP address of the EC2 instance"
-  value       = aws_instance.lesson_06.public_ip
+  value       = aws_instance.bipolarbitsapplication.public_ip
 }
