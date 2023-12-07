@@ -1,7 +1,7 @@
 resource "aws_instance" "bipolarbitsapplication" {
   ami                    = "ami-05a36e1502605b4aa"
   instance_type          = "t2.micro"
-  key_name               = "deployer-key"
+  #key_name               = "deployer-key"
   vpc_security_group_ids = [aws_security_group.sg-ssh.id, aws_security_group.sg-http.id, aws_security_group.sg-https.id]
   user_data              = file("../scripts/user_data.sh")
 
