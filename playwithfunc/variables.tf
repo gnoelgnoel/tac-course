@@ -9,3 +9,4 @@ variable "all_subnets" {
   type        = list(string)
 
 }
+

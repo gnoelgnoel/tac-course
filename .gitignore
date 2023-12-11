@@ -1,3 +1,8 @@
 .vscode/
 .DS_Store
 .terraform/
+lesson-05/keys/aws_key
+lesson-05/keys/aws_key.pub
+.gitignore
+lesson-06/keys/aws_key
+lesson-06/keys/aws_key.pub
