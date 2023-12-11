@@ -12,11 +12,12 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-2"
+  region  = "us-east-2"
+  profile = "support"
 }
 
 module "vpc" {
-  source  = "terraform-aws-modules/vpc/aws"
+  source = "terraform-aws-modules/vpc/aws"
   # To download the latest module, simply omit the version argument. 
   # However, if you wanted a specific module version, you could list it as shown below.
   # This version was released in 2023.
@@ -38,7 +39,7 @@ module "ec2_instances" {
   source  = "terraform-aws-modules/ec2-instance/aws"
   version = "5.0.0"
 
-  name           = "Cluster-A-${count.index}"
+  name  = "Cluster-A-${count.index}"
   count = 3
 
   ami                    = "ami-097a2df4ac947655f"
