@@ -15,3 +15,4 @@ module "webserber-dave" {
   instance_type  = "t2.micro"
   webserver_name = "maks's"
 }
+ 
